@@ -6,7 +6,7 @@ function* middleware(next) {
   try {
     yield next;
   } catch (err) {
-    newrelic.noticError(err);
+    newrelic.noticeError(err);
     throw err;
   } finally {
     newrelic.setTransactionName(this._matchedRoute);

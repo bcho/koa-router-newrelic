@@ -11,6 +11,10 @@
     "koa",
     "koa-router"
   ],
+  "peerDependencies": {
+    "newrelic": ">=1.25.3",
+    "koa-router": ">=5.4.0"
+  },
   "author": "hbc <me@hbc.rocks>",
   "license": "MIT"
 }

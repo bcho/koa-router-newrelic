@@ -9,7 +9,10 @@ function* middleware(next) {
     newrelic.noticeError(err);
     throw err;
   } finally {
-    newrelic.setTransactionName(this._matchedRoute);
+    newrelic.setControllerName(
+      this._matchedRoute,
+      this.method
+    );
   }
 }
 
